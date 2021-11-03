@@ -1,5 +1,6 @@
 <template>
-  <div class="DPlayerDemos-wapper">
+  <div id="dplayer-public"></div>
+  <!-- <div class="DPlayerDemos-wapper">
     <n-card title="COS公有读视频(mp4/mov/..)">
       <div id="dplayer-public"></div>
       <div class="url-from">
@@ -21,7 +22,7 @@
         <n-button type="info">播放</n-button>
       </div>
     </n-card>
-  </div>
+  </div> -->
 </template>
 
 <script setup>

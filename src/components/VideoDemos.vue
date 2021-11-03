@@ -1,6 +1,6 @@
 <template>
-  <n-divider />
-  <n-h3 style="text-align: center;">COS Video Demos</n-h3>
+  <DPlayerDemos />
+  <!-- <n-h3 style="text-align: center;">COS Video Demos</n-h3>
   <n-tabs type="segment">
     <n-tab-pane name="chap1" tab="DPlayer">
       <DPlayerDemos />
@@ -11,7 +11,7 @@
     <n-tab-pane name="chap3" tab="VideoJs">
       VideoJs
     </n-tab-pane>
-  </n-tabs>
+  </n-tabs> -->
 </template>
 
 <script setup>
