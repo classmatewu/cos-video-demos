@@ -27,11 +27,11 @@ const renderIcon = (icon) => {
   }
 }
 
-const curPlayerType = ref('DPlayer')
+const curPlayerType = ref('TCPlayer')
 const curFeatureType = ref('COS公有读普通视频(mp4/mov/...)')
 
 const emit = defineEmits(['onThemeChange', 'onPlayerSelect', 'onFeatureSelect'])
-const themeName = ref('浅色')
+const themeName = ref('深色')
 const onThemeChange = () => {
   themeName.value = themeName.value === '深色' ? '浅色' : '深色'
   emit('onThemeChange')
@@ -39,14 +39,14 @@ const onThemeChange = () => {
 
 const playerType = ref([
   {
-    label: 'DPlayer',
-    key: 'DPlayer',
-    icon: renderIcon(UserIcon)
-  },
-  {
     label: 'TCPlayer',
     key: 'TCPlayer',
     icon: renderIcon(EditIcon)
+  },
+  {
+    label: 'DPlayer',
+    key: 'DPlayer',
+    icon: renderIcon(UserIcon)
   },
   {
     label: 'VideoJs',
@@ -94,7 +94,8 @@ const featureType = ref(DPlayerFeatureList)
 
 const onPlayerSelect = (value) => {
   curPlayerType.value = value
-  featureType.value = value === 'DPlayer' ? DPlayerFeatureList : []
+  // featureType.value = value === 'DPlayer' ? DPlayerFeatureList : []
+  featureType.value = DPlayerFeatureList
   emit('onPlayerSelect', value)
 }
 const onFeatureSelect = (value) => {

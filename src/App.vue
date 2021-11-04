@@ -14,16 +14,16 @@ import {provide, ref} from 'vue';
 import NavBar from './components/NavBar.vue';
 import VideoDemos from './components/VideoDemos.vue';
 
-const theme = ref(darkTheme)
+const theme = ref(null)
 const onThemeChange = () => {
   theme.value = theme.value ? null : darkTheme
 }
 
-const playerType = ref('')
+const playerType = ref('TCPlayer')
 const onPlayerSelect = (value) => {
   playerType.value = value
 }
-const featureType = ref('')
+const featureType = ref('ordinary-public')
 const onFeatureSelect = (value) => {
   featureType.value = value
 }
