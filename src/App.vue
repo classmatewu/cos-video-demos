@@ -2,25 +2,38 @@
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <n-config-provider :theme="theme">
     <n-card>
-      <n-space>
-        <NavBar @onThemeChange="onThemeChange" />
+      <!-- <n-space> -->
+        <NavBar @onThemeChange="onThemeChange" @onPlayerSelect="onPlayerSelect" @onFeatureSelect="onFeatureSelect" />
         <VideoDemos class="video-demos-wapper" msg="Hello COS Video demos" />
-      </n-space>
+      <!-- </n-space> -->
     </n-card>
   </n-config-provider>
 </template>
 
 <script setup>
+import {darkTheme, NCard, NConfigProvider} from 'naive-ui';
+import {provide, ref} from 'vue';
+import NavBar from './components/NavBar.vue';
 import VideoDemos from './components/VideoDemos.vue';
-import NavBar from './components/NavBar.vue'
-import { NConfigProvider, NCard, NButton,darkTheme  } from 'naive-ui'
-import {ref} from 'vue'
 
 const theme = ref(darkTheme)
 const onThemeChange = () => {
-  console.log(2);
   theme.value = theme.value ? null : darkTheme
 }
+
+const playerType = ref('')
+const onPlayerSelect = (value) => {
+  playerType.value = value
+}
+const featureType = ref('')
+const onFeatureSelect = (value) => {
+  featureType.value = value
+}
+
+provide('videoType', {
+  playerType,
+  featureType,
+})
 </script>
 
 <style>
@@ -30,7 +43,7 @@ const onThemeChange = () => {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  width: 1600px;
+  width: 100vw;
 }
 .video-demos-wapper {
   width: 900px;

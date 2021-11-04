@@ -1,5 +1,7 @@
 <template>
-  <DPlayerDemos />
+  <div class="mx-auto mx-auto lg:w-1000px lg:h-1000px">
+    <DPlayerDemos />
+  </div>
   <!-- <n-h3 style="text-align: center;">COS Video Demos</n-h3>
   <n-tabs type="segment">
     <n-tab-pane name="chap1" tab="DPlayer">
@@ -15,7 +17,6 @@
 </template>
 
 <script setup>
-import {NDivider, NH3, NTabPane, NTabs} from 'naive-ui';
 import {defineProps, reactive} from 'vue';
 import DPlayerDemos from './DPlayerDemos.vue';
 
