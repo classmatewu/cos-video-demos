@@ -2,10 +2,8 @@
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <n-config-provider :theme="theme">
     <n-card>
-      <!-- <n-space> -->
-        <NavBar @onThemeChange="onThemeChange" @onPlayerSelect="onPlayerSelect" @onFeatureSelect="onFeatureSelect" />
-        <VideoDemos class="video-demos-wapper" msg="Hello COS Video demos" />
-      <!-- </n-space> -->
+      <NavBar @onThemeChange="onThemeChange" @onPlayerSelect="onPlayerSelect" @onFeatureSelect="onFeatureSelect" />
+      <VideoDemos class="video-demos-wapper" msg="Hello COS Video demos" />
     </n-card>
   </n-config-provider>
 </template>
