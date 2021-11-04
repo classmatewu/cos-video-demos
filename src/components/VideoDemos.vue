@@ -1,16 +1,12 @@
 <template>
-  <div class="mx-auto mx-auto lg:w-1000px lg:h-1000px">
+  <div class="mx-auto mx-auto w-1500px h-700px video-demos-wapper">
     <DPlayerDemos />
   </div>
 </template>
 
 <script setup>
-import {defineProps, reactive} from 'vue';
+import {reactive} from 'vue';
 import DPlayerDemos from './DPlayerDemos.vue';
-
-defineProps({
-  msg: String
-})
 
 const state = reactive({ count: 0 })
 </script>
@@ -18,5 +14,10 @@ const state = reactive({ count: 0 })
 <style scoped>
 a {
   color: #42b983;
+}
+.video-demos-wapper {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 </style>

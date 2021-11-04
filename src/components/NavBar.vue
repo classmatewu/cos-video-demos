@@ -70,12 +70,24 @@ const DPlayerFeatureList = [
     label: 'COS公有读HLS视频(m3u8)',
     key: 'hls-public',
     icon: renderIcon(LogoutIcon)
+  },
+  {
+    label: 'COS私有读HLS视频(m3u8)',
+    key: 'hls-private',
+    icon: renderIcon(LogoutIcon)
+  },
+  {
+    label: 'COS HLS 加密视频(m3u8)',
+    key: 'hls-encrypt',
+    icon: renderIcon(LogoutIcon)
   }
 ]
 const featureKeyMap = {
   'ordinary-public': 'COS公有读普通视频(mp4/mov/...)',
   'ordinary-private': 'COS私有读普通视频(mp4/mov/...)',
   'hls-public': 'COS公有读HLS视频(m3u8)',
+  'hls-private': 'COS私有读HLS视频(m3u8)',
+  'hls-encrypt': 'COS HLS 加密视频(m3u8)',
 }
 
 const featureType = ref(DPlayerFeatureList)
