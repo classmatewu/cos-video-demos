@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
-        <title>腾讯云视频点播示例</title>
+        <title>COS Video Demo</title>
         <!-- 引入播放器 css 文件 -->
         <link href="https://cloudcache.tencent-cloud.com/open/qcloud/video/tcplayer/tcplayer.css" rel="stylesheet">
         <!-- 如需在IE8、9浏览器中初始化播放器，浏览器需支持Flash并在页面中引入 -->
@@ -15,7 +15,6 @@
         <script src="https://imgcache.qq.com/open/qcloud/video/tcplayer/libs/hls.min.0.13.2m.js"></script>
         <!-- 引入播放器 js 文件 -->
         <script src="https://imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.v4.1.min.js"></script>
-        <!-- 示例 CSS 样式可自行删除 -->
     </head>
     <body>
         <!-- 设置播放器容器 -->
@@ -28,12 +27,8 @@
         * playsinline webkit-playsinline x5-playsinline 这几个属性是为了在标准移动端浏览器不劫持视频播放的情况下实现行内播放，此处仅作示例，请按需使用
         -->
         <script>
-            var player = TCPlayer("player-container-id", { /**player-container-id 为播放器容器ID，必须与html中一致*/
-              fileID: "3701925924208976286", /**请传入需要播放的视频fileID 必须 */
-              appID: "1253960454", /**请传入点播账号的子应用appID 必须 */
-              psign: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6MTI1Mzk2MDQ1NCwiZmlsZUlkIjoiMzcwMTkyNTkyNDIwODk3NjI4NiIsImN1cnJlbnRUaW1lU3RhbXAiOjE2MzYwMjk3MzYsImV4cGlyZVRpbWVTdGFtcCI6MTYzNjExNjEzNSwicGNmZyI6ImJhc2ljRHJtUHJlc2V0IiwidXJsQWNjZXNzSW5mbyI6eyJ0IjoiMTYzNjExNjEzNSJ9fQ.4aCxqGGPTUKulBs9O2Xs0IHooOUVNTptOstzB1NBHXE"
-              /**其他参数请在开发文档中查看 */
-            });
+            var tcplayer = TCPlayer("player-container-id", {})
+            tcplayer.src('https://video-preview-1253960454.cos.ap-nanjing.myqcloud.com/mv.mp4')
         </script>
     </body>
 </html>

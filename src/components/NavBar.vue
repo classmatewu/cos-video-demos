@@ -28,7 +28,7 @@ const renderIcon = (icon) => {
 }
 
 const curPlayerType = ref('TCPlayer')
-const curFeatureType = ref('COS公有读普通视频(mp4/mov/...)')
+const curFeatureType = ref('COS公有读普通视频')
 
 const emit = defineEmits(['onThemeChange', 'onPlayerSelect', 'onFeatureSelect'])
 const themeName = ref('深色')
@@ -44,50 +44,50 @@ const playerType = ref([
     icon: renderIcon(EditIcon)
   },
   {
+    label: 'VideoJs',
+    key: 'VideoJs',
+    icon: renderIcon(LogoutIcon)
+  },
+  {
     label: 'DPlayer',
     key: 'DPlayer',
     icon: renderIcon(UserIcon)
   },
-  {
-    label: 'VideoJs',
-    key: 'VideoJs',
-    icon: renderIcon(LogoutIcon)
-  }
 ])
 
 const DPlayerFeatureList = [
   {
-    label: 'COS公有读普通视频(mp4/mov/...)',
+    label: 'COS公有读普通视频',
     key: 'ordinary-public',
     icon: renderIcon(UserIcon)
   },
   {
-    label: 'COS私有读普通视频(mp4/mov/...)',
+    label: 'COS私有读普通视频',
     key: 'ordinary-private',
     icon: renderIcon(EditIcon)
   },
   {
-    label: 'COS公有读HLS视频(m3u8)',
+    label: 'COS公有读HLS视频',
     key: 'hls-public',
     icon: renderIcon(LogoutIcon)
   },
   {
-    label: 'COS私有读HLS视频(m3u8)',
+    label: 'COS私有读HLS视频',
     key: 'hls-private',
     icon: renderIcon(LogoutIcon)
   },
   {
-    label: 'COS HLS 加密视频(m3u8)',
+    label: 'COS HLS 加密视频',
     key: 'hls-encrypt',
     icon: renderIcon(LogoutIcon)
   }
 ]
 const featureKeyMap = {
-  'ordinary-public': 'COS公有读普通视频(mp4/mov/...)',
-  'ordinary-private': 'COS私有读普通视频(mp4/mov/...)',
-  'hls-public': 'COS公有读HLS视频(m3u8)',
-  'hls-private': 'COS私有读HLS视频(m3u8)',
-  'hls-encrypt': 'COS HLS 加密视频(m3u8)',
+  'ordinary-public': 'COS公有读普通视频',
+  'ordinary-private': 'COS私有读普通视频',
+  'hls-public': 'COS公有读HLS视频',
+  'hls-private': 'COS私有读HLS视频',
+  'hls-encrypt': 'COS HLS 加密视频',
 }
 
 const featureType = ref(DPlayerFeatureList)

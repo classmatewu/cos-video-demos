@@ -1,6 +1,7 @@
 <template>
   <div class="mx-auto mx-auto video-demos-wapper">
     <TCPlayerDemos v-if="videoType.playerType.value === 'TCPlayer'" />
+    <VideoPlayerDemos v-else-if="videoType.playerType.value === 'VideoJs'" />
     <DPlayerDemos v-else-if="videoType.playerType.value === 'DPlayer'" />
   </div>
 </template>
@@ -9,6 +10,7 @@
 import {inject, reactive, watch} from 'vue';
 import DPlayerDemos from './DPlayerDemos.vue';
 import TCPlayerDemos from './TCPlayerDemos.vue';
+import VideoPlayerDemos from './VideoPlayerDemos.vue';
 
 const state = reactive({ count: 0 })
 const videoType = inject('videoType')
