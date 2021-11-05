@@ -1,14 +1,13 @@
 <template>
-  <div class="flex">
-    <link href="https://cloudcache.tencent-cloud.com/open/qcloud/video/tcplayer/tcplayer.css" rel="stylesheet">
-    <video id="player-container-id" preload="auto" width="600" height="400" playsinline webkit-playsinline x5-playsinline></video>
-    <n-card title="代码片段"> 所见即所得 </n-card>
+  <link href="https://cloudcache.tencent-cloud.com/open/qcloud/video/tcplayer/tcplayer.css" rel="stylesheet">
+  <div class="flex wapper">
+    <video id="tcplayer-video" preload="auto" playsinline webkit-playsinline x5-playsinline></video>
+    <div class="code-card border">代码片段</div>
   </div>
 </template>
 
 <script setup>
 import $ from 'jquery';
-import {NCard} from 'naive-ui';
 import {inject, onMounted, watch} from 'vue';
 
 const videoType = inject('videoType')
@@ -29,11 +28,20 @@ watch(videoType.featureType, async () => {
 onMounted(async () => {
   await $.getScript('https://imgcache.qq.com/open/qcloud/video/tcplayer/libs/hls.min.0.13.2m.js')
   await $.getScript('https://imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.v4.1.min.js')
-  tcplayer = TCPlayer("player-container-id", {})
+  tcplayer = TCPlayer("tcplayer-video", {})
   tcplayer.src('https://video-preview-1253960454.cos.ap-nanjing.myqcloud.com/mv.mp4')
 })
 </script>
 
-<style>
-
+<style scoped>
+.wapper {
+  width: 100%;
+}
+#tcplayer-video {
+  width: 50%;
+  height: 500px;
+}
+.code-card {
+  width: 50%;
+}
 </style>

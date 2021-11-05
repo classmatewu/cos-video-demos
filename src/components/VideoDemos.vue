@@ -1,8 +1,7 @@
 <template>
-  <div class="mx-auto mx-auto w-1500px h-700px video-demos-wapper">
+  <div class="mx-auto mx-auto video-demos-wapper">
     <TCPlayerDemos v-if="videoType.playerType.value === 'TCPlayer'" />
     <DPlayerDemos v-else-if="videoType.playerType.value === 'DPlayer'" />
-
   </div>
 </template>
 
@@ -23,8 +22,6 @@ a {
   color: #42b983;
 }
 .video-demos-wapper {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  width: 88vw;
 }
 </style>

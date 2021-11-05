@@ -42,8 +42,22 @@ provide('videoType', {
   text-align: center;
   color: #2c3e50;
   width: 100vw;
+  height: 100vh;
+}
+.video-demos-wapper, .n-card, .n-card.n-card--bordered {
+  width: 100%;
+}
+.n-config-provider {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.n-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .video-demos-wapper {
-  width: 900px;
+  margin-top: 50px;
 }
 </style>

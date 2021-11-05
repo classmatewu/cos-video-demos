@@ -1,7 +1,7 @@
 <template>
-  <div class="navbar-wapper mx-auto w-80vw flex h-50px">
+  <div class="navbar-wapper">
     <n-gradient-text type="info"> COS Video Demos </n-gradient-text>
-    <div class="navbar-actions lg:w-450px flex">
+    <div class="navbar-actions">
       <n-dropdown :options="playerType" @select="onPlayerSelect">
       <n-button>{{curPlayerType}}</n-button>
       </n-dropdown>
@@ -109,9 +109,14 @@ const onFeatureSelect = (value) => {
   font-size: 24px;
 }
 .navbar-wapper {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  width:88vw;
 }
 .navbar-actions {
+  display: flex;
   justify-content: space-evenly;
+  width: 400px;
 }
 </style>

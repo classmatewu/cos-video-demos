@@ -1,24 +1,13 @@
 <template>
   <div class="player-wapper">
-    <div>
-      <div id="dplayer-video"></div>
-      <n-input placeholder="输入对应类型的COS Object URL">
-        <template #suffix>
-          <n-icon>
-            <play-icon />
-          </n-icon>
-        </template>
-      </n-input>
-    </div>
-    <n-card title="代码片段"> 所见即所得 </n-card>
+    <div id="dplayer-video"></div>
+    <div class="code-card border">代码片段</div>
   </div>
 </template>
 
 <script setup>
-import {PlayCircleSharp as PlayIcon} from '@vicons/ionicons5';
 import DPlayer from 'dplayer';
 import $ from 'jquery';
-import {NCard, NIcon, NInput} from 'naive-ui';
 import {defineProps, inject, onMounted, reactive, watch} from 'vue';
 
 defineProps({
@@ -59,7 +48,8 @@ watch(videoType.featureType, async () => {
 
 <style scoped>
 #dplayer-video {
-  width: 100%;
+  width: 50%;
+  height: 500px;
 }
 .n-card {
   max-width: 600px;
@@ -78,11 +68,15 @@ watch(videoType.featureType, async () => {
 }
 .player-wapper {
   display: flex;
+  width: 100%;
 }
 .n-input {
   width: 100%;
 }
 .n-icon {
   cursor: pointer;
+}
+.code-card {
+  width: 50%;
 }
 </style>
