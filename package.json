@@ -7,9 +7,13 @@
   },
   "dependencies": {
     "@vicons/ionicons5": "^0.11.0",
+    "codemirror": "^5.63.3",
+    "codemirror-editor-vue3": "^0.2.4",
     "dplayer": "^1.26.0",
     "jquery": "^3.6.0",
-    "vue": "^3.0.5"
+    "js-beautify": "^1.14.0",
+    "vue": "^3.0.5",
+    "vue-codemirror": "^4.0.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.5",

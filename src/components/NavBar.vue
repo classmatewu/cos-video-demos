@@ -17,7 +17,7 @@
 <script setup>
 import {LogOutOutline as LogoutIcon, Pencil as EditIcon, PersonCircleOutline as UserIcon} from '@vicons/ionicons5'
 import {NButton, NDivider, NDropdown, NGradientText, NIcon} from 'naive-ui'
-import {defineEmits, h, ref} from 'vue'
+import {h, ref} from 'vue'
 
 const renderIcon = (icon) => {
   return () => {

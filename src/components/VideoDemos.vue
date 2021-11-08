@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto mx-auto video-demos-wapper">
+  <div class="mx-auto video-demos-wapper">
     <TCPlayerDemos v-if="videoType.playerType.value === 'TCPlayer'" />
     <VideoPlayerDemos v-else-if="videoType.playerType.value === 'VideoJs'" />
     <DPlayerDemos v-else-if="videoType.playerType.value === 'DPlayer'" />
