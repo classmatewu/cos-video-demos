@@ -1,7 +1,7 @@
 <template>
   <div class="player-wapper">
     <div id="dplayer-video"></div>
-    <div class="code-card border">代码片段</div>
+    <CodeCard class="code-card" :codeDemoMap="dplayerCodeDemoMap" />
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 import DPlayer from 'dplayer';
 import $ from 'jquery';
 import {inject, onMounted, reactive, watch} from 'vue';
-import {videoUrlMap} from '../utils';
+import {videoUrlMap, dplayerCodeDemoMap} from '../utils';
+import CodeCard from './CodeCard.vue'
 
 defineProps({
   msg: String

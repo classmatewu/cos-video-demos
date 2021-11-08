@@ -1,8 +1,19 @@
-import TCPlayerHLSEncryptDemoCode from '../html-demos/tcplayer/tcplayer-hls-encrypt.html?raw';
-import TCPlayerHLSPrivateDemoCode from '../html-demos/tcplayer/tcplayer-hls-private.html?raw';
-import TCPlayerHLSPublicDemoCode from '../html-demos/tcplayer/tcplayer-hls-public.html?raw';
-import TCPlayerOrdinaryPrivateDemoCode from '../html-demos/tcplayer/tcplayer-ordinary-private.html?raw';
-import TCPlayerOrdinaryPublicDemoCode from '../html-demos/tcplayer/tcplayer-ordinary-public.html?raw';
+// tcplayer/videojs/dplayer demos
+import dPlayerHLSEncryptDemoCode from '../html-demos/dplayer/dplayer-hls-encrypt.html?raw';
+import dPlayerHLSPrivateDemoCode from '../html-demos/dplayer/dplayer-hls-private.html?raw';
+import dPlayerHLSPublicDemoCode from '../html-demos/dplayer/dplayer-hls-public.html?raw';
+import dPlayerOrdinaryPrivateDemoCode from '../html-demos/dplayer/dplayer-ordinary-private.html?raw';
+import dPlayerOrdinaryPublicDemoCode from '../html-demos/dplayer/dplayer-ordinary-public.html?raw';
+import tcPlayerHLSEncryptDemoCode from '../html-demos/tcplayer/tcplayer-hls-encrypt.html?raw';
+import tcPlayerHLSPrivateDemoCode from '../html-demos/tcplayer/tcplayer-hls-private.html?raw';
+import tcPlayerHLSPublicDemoCode from '../html-demos/tcplayer/tcplayer-hls-public.html?raw';
+import tcPlayerOrdinaryPrivateDemoCode from '../html-demos/tcplayer/tcplayer-ordinary-private.html?raw';
+import tcPlayerOrdinaryPublicDemoCode from '../html-demos/tcplayer/tcplayer-ordinary-public.html?raw';
+import videojsHLSEncryptDemoCode from '../html-demos/videojs/videojs-hls-encrypt.html?raw';
+import videojsHLSPrivateDemoCode from '../html-demos/videojs/videojs-hls-private.html?raw';
+import videojsHLSPublicDemoCode from '../html-demos/videojs/videojs-hls-public.html?raw';
+import videojsOrdinaryPrivateDemoCode from '../html-demos/videojs/videojs-ordinary-private.html?raw';
+import videojsOrdinaryPublicDemoCode from '../html-demos/videojs/videojs-ordinary-public.html?raw';
 
 const videoUrlMap = {
   'ordinary-public': 'https://video-preview-1253960454.cos.ap-nanjing.myqcloud.com/mv.mp4',
@@ -13,14 +24,32 @@ const videoUrlMap = {
 }
 
 const tcplayerCodeDemoMap = {
-  'ordinary-public': TCPlayerOrdinaryPublicDemoCode,
-  'ordinary-private': TCPlayerOrdinaryPrivateDemoCode,
-  'hls-public': TCPlayerHLSPublicDemoCode,
-  'hls-private': TCPlayerHLSPrivateDemoCode,
-  'hls-encrypt': TCPlayerHLSEncryptDemoCode,
+  'ordinary-public': tcPlayerOrdinaryPublicDemoCode,
+  'ordinary-private': tcPlayerOrdinaryPrivateDemoCode,
+  'hls-public': tcPlayerHLSPublicDemoCode,
+  'hls-private': tcPlayerHLSPrivateDemoCode,
+  'hls-encrypt': tcPlayerHLSEncryptDemoCode,
+}
+
+const dplayerCodeDemoMap = {
+  'ordinary-public': dPlayerHLSEncryptDemoCode,
+  'ordinary-private': dPlayerHLSPrivateDemoCode,
+  'hls-public': dPlayerHLSPublicDemoCode,
+  'hls-private': dPlayerOrdinaryPrivateDemoCode,
+  'hls-encrypt': dPlayerOrdinaryPublicDemoCode,
+}
+
+const videojsCodeDemoMap = {
+  'ordinary-public': videojsHLSEncryptDemoCode,
+  'ordinary-private': videojsHLSPrivateDemoCode,
+  'hls-public': videojsHLSPublicDemoCode,
+  'hls-private': videojsOrdinaryPrivateDemoCode,
+  'hls-encrypt': videojsOrdinaryPublicDemoCode,
 }
 
 export {
   videoUrlMap,
   tcplayerCodeDemoMap,
+  dplayerCodeDemoMap,
+  videojsCodeDemoMap,
 };

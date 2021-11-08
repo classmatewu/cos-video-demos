@@ -3,8 +3,6 @@
     href="https://cloudcache.tencent-cloud.com/open/qcloud/video/tcplayer/tcplayer.css"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="codemirror-5.12/lib/codemirror.css" />
-  <link rel="stylesheet" href="codemirror-5.12/theme/seti.css" />
   <div class="flex wapper">
     <video id="tcplayer-video" preload="auto" playsinline webkit-playsinline x5-playsinline></video>
     <!-- <div id="code-card" class="code-card border">{{demoCode}}</div> -->
