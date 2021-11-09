@@ -10,14 +10,15 @@
         </a>
       </p>
     </video>
-    <div class="code-card border">代码片段</div>
+    <CodeCard class="code-card" :codeDemoMap="videojsCodeDemoMap" />
   </div>
 </template>
 
 <script setup>
 import $ from 'jquery';
 import {inject, onMounted, ref, watch} from 'vue';
-import { videoUrlMap } from '../utils'
+import {videojsCodeDemoMap, videoUrlMap} from '../utils';
+import CodeCard from './CodeCard.vue';
 const videoType = inject('videoType')
 const src = ref('https://video-preview-1253960454.cos.ap-nanjing.myqcloud.com/mv.mp4')
 let videoPlayer = null
@@ -87,15 +88,25 @@ onMounted(async () => {
   width: 50%;
   height: 500px;
 }
-.code-card {
-  width: 50%;
-  padding: 10px 0 0 10px;
-}
 .video-js {
   height: 500px;
 }
 
 .videojs-player-dimensions.vjs-fluid {
   padding-top: 0;
+}
+
+.code-card {
+  width: 50%!important;
+}
+
+@media (max-width: 768px) {
+  .wapper {
+    display: flex;
+    flex-direction: column;
+  }
+  #videojs-player, .code-card {
+    width: 100%!important;
+  }
 }
 </style>

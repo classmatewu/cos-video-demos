@@ -5,28 +5,19 @@
   />
   <div class="flex wapper">
     <video id="tcplayer-video" preload="auto" playsinline webkit-playsinline x5-playsinline></video>
-    <!-- <div id="code-card" class="code-card border">{{demoCode}}</div> -->
-    <Codemirror
-      id="code-card" class="code-card border"
-      v-model:value="demoCode"
-      :options="cmOptions"
-      border
-      placeholder="测试 placeholder"
-      :height="500"
-      @change="change"
-    />
+    <CodeCard class="code-card" :codeDemoMap="tcplayerCodeDemoMap" />
   </div>
   
 </template>
 
 <script setup>
-import Codemirror from "codemirror-editor-vue3";
 import "codemirror-editor-vue3/dist/style.css"; // plugin-style
 import "codemirror/mode/javascript/javascript.js"; // language
 import $ from 'jquery';
 // import {html as beautifyHtml} from 'js-beautify';
 import {inject, onMounted, ref, watch} from 'vue';
 import {tcplayerCodeDemoMap, videoUrlMap} from '../utils';
+import CodeCard from './CodeCard.vue';
 
 const videoType = inject('videoType')
 
@@ -77,5 +68,15 @@ const cmOptions = {
   white-space: pre-wrap;
   height: 500px;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .wapper {
+    display: flex;
+    flex-direction: column;
+  }
+  #tcplayer-video, .code-card {
+    width: 100%!important;
+  }
 }
 </style>

@@ -31,6 +31,7 @@ const onFeatureSelect = (value) => {
 provide('videoType', {
   playerType,
   featureType,
+  theme,
 })
 </script>
 
@@ -59,5 +60,13 @@ provide('videoType', {
 }
 .video-demos-wapper {
   margin-top: 50px;
+}
+@media (max-width: 768px) {
+  #app {
+    height: 100%;
+  }
+  .video-demos-wapper {
+    margin-top: 10px;
+  }
 }
 </style>

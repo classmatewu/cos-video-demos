@@ -9,8 +9,8 @@
 import DPlayer from 'dplayer';
 import $ from 'jquery';
 import {inject, onMounted, reactive, watch} from 'vue';
-import {videoUrlMap, dplayerCodeDemoMap} from '../utils';
-import CodeCard from './CodeCard.vue'
+import {dplayerCodeDemoMap, videoUrlMap} from '../utils';
+import CodeCard from './CodeCard.vue';
 
 defineProps({
   msg: String
@@ -72,5 +72,15 @@ watch(videoType.featureType, async () => {
 }
 .code-card {
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  #player-wapper {
+    display: flex;
+    flex-direction: column;
+  }
+  #dplayer-video, .code-card {
+    width: 100%!important;
+  }
 }
 </style>

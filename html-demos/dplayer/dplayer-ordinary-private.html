@@ -1,1 +1,22 @@
 <!-- dplayer-ordinary-private.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPlayer 私有读普通视频 Demo</title>
+</head>
+<body>
+  <div id="dplayer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+  <script>
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        video: {
+            url: 'demo.mp4',
+        },
+    });
+  </script>
+</body>
+</html>

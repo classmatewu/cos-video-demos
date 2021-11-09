@@ -119,4 +119,13 @@ const onFeatureSelect = (value) => {
   justify-content: space-evenly;
   width: 400px;
 }
+
+@media (max-width: 768px) {
+  .navbar-wapper {
+    flex-direction: column;
+  }
+  .navbar-actions {
+    margin-top: 20px;
+  }
+}
 </style>
