@@ -1,8 +1,10 @@
 <template>
   <div class="mx-auto video-demos-wapper">
-    <TCPlayerDemos v-if="videoType.playerType.value === 'TCPlayer'" />
-    <VideoPlayerDemos v-else-if="videoType.playerType.value === 'VideoJs'" />
-    <DPlayerDemos v-else-if="videoType.playerType.value === 'DPlayer'" />
+    <keep-alive>
+      <TCPlayerDemos v-if="videoType.playerType.value === 'TCPlayer'" />
+      <VideoPlayerDemos v-else-if="videoType.playerType.value === 'VideoJs'" />
+      <DPlayerDemos v-else-if="videoType.playerType.value === 'DPlayer'" />
+    </keep-alive>
   </div>
 </template>
 

@@ -15,7 +15,16 @@
 </template>
 
 <script setup>
-import {LogOutOutline as LogoutIcon, Pencil as EditIcon, PersonCircleOutline as UserIcon} from '@vicons/ionicons5'
+import {
+  Basketball as BasketballIcon,
+  Football as FootballIcon,
+  AmericanFootball as AmericanFootballIcon,
+  Pizza as PizzaIcon,
+  PintSharp as PintSharpIcon,
+  SnowSharp as SnowSharpIcon,
+  SunnySharp as SunnySharpIcon,
+  LockClosed as LockClosedIcon,
+} from '@vicons/ionicons5'
 import {NButton, NDivider, NDropdown, NGradientText, NIcon} from 'naive-ui'
 import {h, ref} from 'vue'
 
@@ -41,17 +50,17 @@ const playerType = ref([
   {
     label: 'TCPlayer',
     key: 'TCPlayer',
-    icon: renderIcon(EditIcon)
+    icon: renderIcon(BasketballIcon)
   },
   {
     label: 'VideoJs',
     key: 'VideoJs',
-    icon: renderIcon(LogoutIcon)
+    icon: renderIcon(FootballIcon)
   },
   {
     label: 'DPlayer',
     key: 'DPlayer',
-    icon: renderIcon(UserIcon)
+    icon: renderIcon(AmericanFootballIcon)
   },
 ])
 
@@ -59,27 +68,27 @@ const DPlayerFeatureList = [
   {
     label: 'COS公有读普通视频',
     key: 'ordinary-public',
-    icon: renderIcon(UserIcon)
+    icon: renderIcon(SunnySharpIcon)
   },
   {
     label: 'COS私有读普通视频',
     key: 'ordinary-private',
-    icon: renderIcon(EditIcon)
+    icon: renderIcon(SnowSharpIcon)
   },
   {
     label: 'COS公有读HLS视频',
     key: 'hls-public',
-    icon: renderIcon(LogoutIcon)
+    icon: renderIcon(PizzaIcon)
   },
   {
     label: 'COS私有读HLS视频',
     key: 'hls-private',
-    icon: renderIcon(LogoutIcon)
+    icon: renderIcon(PintSharpIcon)
   },
   {
     label: 'COS HLS 加密视频',
     key: 'hls-encrypt',
-    icon: renderIcon(LogoutIcon)
+    icon: renderIcon(LockClosedIcon)
   }
 ]
 const featureKeyMap = {
