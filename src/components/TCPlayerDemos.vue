@@ -13,7 +13,7 @@
 <script setup>
 import "codemirror-editor-vue3/dist/style.css"; // plugin-style
 import "codemirror/mode/javascript/javascript.js"; // language
-import $ from 'jquery';
+// import $ from 'jquery';
 // import {html as beautifyHtml} from 'js-beautify';
 import {inject, onMounted, ref, watch} from 'vue';
 import {tcplayerCodeDemoMap, videoUrlMap} from '../utils';
@@ -32,8 +32,8 @@ watch(videoType.featureType, async () => {
 })
 
 onMounted(async () => {
-  await $.getScript('https://imgcache.qq.com/open/qcloud/video/tcplayer/libs/hls.min.0.13.2m.js')
-  await $.getScript('https://imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.v4.1.min.js')
+  // await $.getScript('https://imgcache.qq.com/open/qcloud/video/tcplayer/libs/hls.min.0.13.2m.js')
+  // await $.getScript('https://imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.v4.1.min.js')
   tcplayer = TCPlayer("tcplayer-video", {})
   tcplayer.src('https://video-preview-1253960454.cos.ap-nanjing.myqcloud.com/mv.mp4')
 })
