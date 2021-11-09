@@ -75,7 +75,7 @@ watch(videoType.featureType, async () => {
 }
 
 @media (max-width: 768px) {
-  #player-wapper {
+  .player-wapper {
     display: flex;
     flex-direction: column;
   }
